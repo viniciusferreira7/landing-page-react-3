@@ -14,10 +14,21 @@ export const Container = styled.div`
   `}
 `;
 
-export const Container2 = styled(Container).attrs({ as: 'table' })`
+export const Heading = styled.h1`
+  color: lightgoldenrodyellow;
+`;
+
+export const Container2 = styled(Container).attrs({ as: 'article' })`
   ${(props) => css`
     background: ${props.theme.colors.moreBg};
   `}
+
+  > ${Heading} {
+    color: lightseagreen;
+  }
+  ${Heading} {
+    color: darkgoldenrod;
+  }
 `;
 
 function Home() {
@@ -39,6 +50,7 @@ function Home() {
           eget sapien nisl. Duis aliquet tincidunt finibus. Vestibulum vel mi a dolor finibus mattis eu at justo. Nulla
           rutrum dignissim tortor sed finibus
         </p>
+        <Heading>Hello</Heading>
       </Container2>
     </div>
   );
