@@ -8,5 +8,5 @@ export const Heading = ({ children }) => {
 };
 
 Heading.propTypes = {
-  children: P.node,
+  children: P.node.isRequired,
 };
