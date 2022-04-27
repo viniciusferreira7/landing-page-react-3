@@ -1,7 +1,7 @@
 export const theme = {
   colors: {
-    mainBg: 'darkred',
-    secondaryBg: 'navy',
-    moreBg: 'lightskyblue',
+    primaryColor: '#0A1128',
+    secondaryColor: '#dc143c',
+    white: '#fff',
   },
 };
