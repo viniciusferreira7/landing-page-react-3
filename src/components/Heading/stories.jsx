@@ -1,4 +1,5 @@
 import { Heading } from '.';
+// import { theme } from '../../styles/theme';
 
 export default {
   title: 'Heading',
@@ -8,6 +9,11 @@ export default {
   },
   argsTypes: {
     children: { type: 'string' },
+  },
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
   },
 };
 
