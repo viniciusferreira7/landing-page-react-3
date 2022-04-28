@@ -12,15 +12,18 @@ export const parameters = {
     },
   },
   backgrounds: {
+
     default: 'light',
-    value: [{
-      name: 'light',
-      value: theme.colors.lightBg
-    },
-    {
-      name: 'dark',
-      value: theme.colors.darkBg
-    },]
+    value: [
+      {
+        name: 'light',
+        value: theme.colors.secondaryColor
+      },
+      {
+        name: 'dark',
+        value: theme.colors.secondaryColor
+      },
+    ]
   }
 
 }
