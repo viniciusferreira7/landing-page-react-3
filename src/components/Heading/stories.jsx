@@ -6,11 +6,11 @@ export default {
   component: Heading,
   args: {
     children: 'Light Text',
-    light: false,
+    colorDark: false,
   },
   argsTypes: {
     children: { type: 'string' },
-    light: { type: 'boolean' },
+    colorDark: { type: 'boolean' },
   },
   parameters: {
     backgrounds: {
@@ -20,7 +20,7 @@ export default {
 };
 
 export const Light = (args) => <Heading {...args} />;
-export const Dark = (args) => <Heading {...args} light={true} />;
+export const Dark = (args) => <Heading {...args} colorDark={true} />;
 
 Light.parameters = {
   backgrounds: {
@@ -30,5 +30,5 @@ Light.parameters = {
 
 Dark.args = {
   children: 'Dark Text',
-  light: true,
+  colorDark: true,
 };
