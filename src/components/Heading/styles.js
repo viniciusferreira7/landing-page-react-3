@@ -1,17 +1,27 @@
 import styled, { css } from 'styled-components';
 
 export const titleSize = {
-  small: ({ theme }) =>
+  small: (theme) =>
     css`
-      ${theme.font.size.small}
+      font-size: ${theme.font.sizes.medium};
     `,
-  medium: ({ theme }) => css``,
-  big: ({ theme }) => css``,
+  medium: (theme) =>
+    css`
+      font-size: ${theme.font.sizes.large};
+    `,
+  big: (theme) =>
+    css`
+      font-size: ${theme.font.sizes.xlarge};
+    `,
+  huge: (theme) =>
+    css`
+      font-size: ${theme.font.sizes.huge};
+    `,
 };
 
 export const Title = styled.h1`
   ${({ theme, colorDark, size }) => css`
     color: ${colorDark ? theme.colors.white : theme.colors.primaryColor};
-    ${titleSize[size]()}
+    ${titleSize[size](theme)};
   `}
 `;
