@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.div`
   ${({ theme }) =>
     css`
-      background: ${theme.colors.mainBg};
+      background: ${theme.colors.primaryColor};
     `}
   color: white;
 `;
