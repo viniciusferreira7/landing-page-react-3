@@ -72,4 +72,22 @@ describe('<Heading/>', () => {
       media: theme.media.lteMedium,
     });
   });
+
+  it('should render with uppercase letters', () => {
+    const { rerender } = renderTheme(<Heading upperCase={true}>Texto</Heading>);
+    const heading = screen.getByRole('heading', { name: 'Texto' });
+
+    expect(heading).toHaveStyle({
+      'text-transform': 'uppercase',
+    });
+
+    rerender(
+      <ThemeProvider theme={theme}>
+        <Heading upperCase={false}>Texto</Heading>
+      </ThemeProvider>,
+    );
+    expect(heading).toHaveStyle({
+      'text-transform': 'none',
+    });
+  });
 });
