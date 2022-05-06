@@ -90,4 +90,12 @@ describe('<Heading/>', () => {
       'text-transform': 'none',
     });
   });
+
+  it('should render correct heading element', () => {
+    const { container } = renderTheme(<Heading as="h6">Texto</Heading>);
+    const heading = screen.getByRole('heading', { name: 'Texto' });
+
+    const h6 = container.querySelector('h6');
+    expect(h6.tagName.toLowerCase()).toBe('h6');
+  });
 });
