@@ -1,6 +1,5 @@
 import P from 'prop-types';
 import React from 'react';
-
 import * as Styled from './styles';
 
 export const Heading = ({ children, colorDark = false, as = 'h1', size = 'big', upperCase = false }) => {
