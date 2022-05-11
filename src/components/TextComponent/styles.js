@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.p`
 ${({ theme }) => css`
-background-color:${theme.colors.white}`}
+background-color:${theme.colors.white};
+color: ${theme.font.sizes.xhuge}`}
+
 `;
