@@ -5,9 +5,11 @@ export default {
   component: MenuLink,
   args: {
     children: 'Light Text',
+    link: 'https://www.google.com/',
   },
   argsTypes: {
     children: { type: 'string' },
+    link: { type: 'string' },
   },
 };
 
