@@ -3,8 +3,31 @@ import { TextComponent } from '.';
 import { renderTheme } from '../../styles/render-theme';
 
 describe('<TextComponent/>', () => {
-  it('should render with default values', () => {
+  it('should render correctly text', () => {
     renderTheme(<TextComponent>Texto</TextComponent>);
-    expect(screen.getByRole('heading')).toBeInTheDocument();
+    const text = screen.getByText('Texto');
+    expect(text).toBeInTheDocument();
+  });
+  it('should only paragraph', () => {
+    renderTheme(<TextComponent>Texto</TextComponent>);
+    const text = screen.getByText('Texto');
+    expect(text.tagName.toLowerCase()).toBe('p');
+  });
+
+  it('should march snapshot', () => {
+    const { container } = renderTheme(<TextComponent>Texto</TextComponent>);
+    expect(container).toMatchInlineSnapshot(`
+      .c0 {
+        font-size: 2.4rem;
+      }
+
+      <div>
+        <p
+          class="c0"
+        >
+          Texto
+        </p>
+      </div>
+    `);
   });
 });
