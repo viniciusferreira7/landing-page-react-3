@@ -15,7 +15,7 @@ export default {
 
 export const Templetes = (args) => {
   return (
-    <div>
+    <div style={{ display: 'flex' }}>
       <MenuLink {...args} />
     </div>
   );

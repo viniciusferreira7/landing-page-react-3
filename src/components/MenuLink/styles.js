@@ -2,9 +2,21 @@ import styled, { css } from 'styled-components';
 
 export const Container = styled.a`
 ${({ theme }) => css`
+display: block;
 font-size: ${theme.font.sizes.small};
 text-decoration: none;
-padding:${theme.spacings.huge};
-color:${theme.colors.primaryColor};`}
-background-color: red;
+padding:${theme.spacings.medium};
+color:${theme.colors.primaryColor};
+position:relative;
+
+&::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left:25%;
+  width:50%;
+  height:0.2rem;
+  background:${theme.colors.secondaryColor};
+}
+`}
 `;
