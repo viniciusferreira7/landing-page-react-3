@@ -4,17 +4,22 @@ import React from 'react';
 import * as Styled from './styles';
 import { MenuLink } from '../MenuLink';
 
-export const NavLinks = ({ link = ['Menu', 'footer'] }) => {
+export const NavLinks = ({ link = [] }) => {
   return (
     <Styled.Container>
-      {link.map((item) => {
-        <MenuLink>{item}</MenuLink>;
-      })}
+      {link.map((link) => (
+        <MenuLink key={link.link} {...link} />
+      ))}
     </Styled.Container>
   );
 };
 
 NavLinks.propTypes = {
-  children: P.node.isRequired,
-  link: P.array.isRequired,
+  link: P.arrayOf(
+    P.shape({
+      children: P.string.isRequired,
+      link: P.string.isRequired,
+      newTab: P.bool,
+    }),
+  ).isRequired,
 };
