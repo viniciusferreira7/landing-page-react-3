@@ -12,7 +12,7 @@ position:relative;
 &::after{
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 1.3rem;
   left:50%;
   width:0;
   height:0.2rem;
