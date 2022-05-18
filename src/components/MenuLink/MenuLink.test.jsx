@@ -22,8 +22,10 @@ describe('<MenuLink/>', () => {
     );
   });
   it('should match snapshot', () => {
-    renderTheme(<MenuLink link="http://localhost">Texto</MenuLink>);
-    expect(screen.getByRole('link', { name: 'Texto' })).toMatchInlineSnapshot(`
+    const { container } = renderTheme(
+      <MenuLink link="http://localhost">Texto</MenuLink>,
+    );
+    expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
         display: block;
         font-size: 1.6rem;
