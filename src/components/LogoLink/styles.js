@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.a`
-${({ theme }) => css``}
+${({ theme }) => css`
+background-color:${theme.colors.primaryColor};`}
 `;

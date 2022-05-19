@@ -5,6 +5,8 @@ export default {
   component: LogoLink,
   args: {
     text: 'LogoLink',
+    srcImage: 'assets/images/logo.svg',
+    link: '',
   },
   argsTypes: {
     text: { type: 'string' },

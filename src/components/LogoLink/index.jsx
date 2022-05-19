@@ -3,7 +3,7 @@ import React from 'react';
 import { Heading } from '../Heading';
 import * as Styled from './styles';
 
-export const LogoLink = ({ text, srcImage = '', link }) => {
+export const LogoLink = ({ text, srcImage, link }) => {
   return (
     <Heading>
       <Styled.Container href={link}>
