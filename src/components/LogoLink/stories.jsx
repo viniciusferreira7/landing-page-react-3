@@ -13,10 +13,22 @@ export default {
   },
 };
 
-export const Templetes = (args) => {
+export const ImageOnly = (args) => {
   return (
     <div>
       <LogoLink {...args} />
     </div>
   );
+};
+
+export const TextOnly = (args) => {
+  return (
+    <div>
+      <LogoLink {...args} />
+    </div>
+  );
+};
+
+TextOnly.args = {
+  srcImage: '',
 };

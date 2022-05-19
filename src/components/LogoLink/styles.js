@@ -1,6 +1,11 @@
 import styled, { css } from 'styled-components';
 
 export const Container = styled.a`
-${({ theme }) => css`
-background-color:${theme.colors.primaryColor};`}
+${() => css`
+  text-decoration:none;
+  color:inherit;
+
+  > img{
+    max-height: 3rem;
+  }`}
 `;
