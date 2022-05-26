@@ -4,27 +4,30 @@ import { renderTheme } from '../../styles/render-theme';
 
 describe('<LogoLink/>', () => {
   it('should render text logo', () => {
-    renderTheme(
-      <LogoLink link="#target" text="Ola mundo">
-        Texto
-      </LogoLink>,
-    );
+    renderTheme(<LogoLink link="#target" text="Ola mundo" />);
 
-    const heading = screen.getByRole('heading', { name: 'Ola mundo' });
-    screen.debug();
-    expect(heading.firstChild).toHaveAttribute('href', '#target');
+    expect(screen.getByRole('link', { name: /mun/i })).toHaveAttribute(
+      'href',
+      '#target',
+    );
   });
 
   it('should render image logo', () => {
     renderTheme(
-      <LogoLink link="#target" text="Ola mundo" srcImage="image.gif">
-        Texto
-      </LogoLink>,
+      <LogoLink link="#target" text="Ola mundo" srcImage="image.gif" />,
     );
 
     expect(screen.getByRole('img', { name: /Ola/i })).toHaveAttribute(
       'src',
       'image.gif',
     );
+  });
+
+  it('should match snapshot', () => {
+    renderTheme(<LogoLink link="#target" text="Ola mundo" />);
+
+    const { container } = screen.getByRole('link', { name: /Ola/i });
+
+    expect(container).toMatchSnapshot();
   });
 });
