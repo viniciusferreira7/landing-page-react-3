@@ -1,5 +1,13 @@
 import styled, { css } from 'styled-components';
 
+const containerBackgroundActive = (theme) => css`
+  background:${theme.colors.primaryColor};
+  color:${theme.colors.white};
+  `;
+
 export const Container = styled.div`
-${() => css``}
+${({ theme, background }) => css`
+  background:${theme.colors.white};
+  color:${theme.colors.primaryColor};
+  ${background && containerBackgroundActive(theme)}`}
 `;
