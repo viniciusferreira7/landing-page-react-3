@@ -5,9 +5,12 @@ const containerBackgroundActive = (theme) => css`
   color:${theme.colors.white};
   `;
 
-export const Container = styled.div`
+export const Container = styled.section`
 ${({ theme, background }) => css`
-  background:${theme.colors.white};
+  background-color:${theme.colors.white};
   color:${theme.colors.primaryColor};
   ${background && containerBackgroundActive(theme)}`}
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 `;
