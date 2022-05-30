@@ -27,7 +27,7 @@ describe('<SectionBackground/>', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it('should render with background white', () => {
+  it('should render with background light', () => {
     const { container } = renderTheme(
       <SectionBackground background>
         <h1>Children</h1>
