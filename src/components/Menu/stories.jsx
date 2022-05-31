@@ -1,13 +1,17 @@
 import { Menu } from '.';
 
+import linkMock from '../NavLinks/mock';
+
 export default {
   title: 'Menu',
   component: Menu,
   args: {
-    children: 'Menu',
-  },
-  argsTypes: {
-    children: { type: 'string' },
+    links: linkMock,
+    logoData: {
+      text: 'Menu',
+      link: '#target',
+      srcImage: '',
+    },
   },
 };
 
