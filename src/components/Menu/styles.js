@@ -13,3 +13,11 @@ ${({ theme }) => css`
     border-bottom-color: ${theme.colors.mediumGray};
 `}
 `;
+
+export const MenuContainer = styled.div`
+${() => css`
+`}`;
+
+export const button = styled.button`
+${() => css`
+`}`;
