@@ -8,7 +8,7 @@ export default {
   args: {
     links: linkMock,
     logoData: {
-      text: 'Menu',
+      text: 'Logo',
       link: '#target',
       srcImage: '',
     },
