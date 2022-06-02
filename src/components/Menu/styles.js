@@ -61,6 +61,27 @@ ${({ theme }) => css`
 
 `}`;
 
-export const button = styled.button`
-${() => css`
+export const Button = styled.button`
+${({ theme }) => css`
+  z-index:6;
+  position: fixed;
+  top: 2rem;
+  right:2rem;
+  width:4rem;
+  height:4rem;
+  background: ${theme.colors.primaryColor};
+  color:${theme.colors.white};
+  border:none;
+  display:none;
+
+  > svg{
+    width:2.5rem;
+    height:2.5rem;
+  }
+
+  @media ${theme.media.lteMedium}{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+  }
 `}`;
