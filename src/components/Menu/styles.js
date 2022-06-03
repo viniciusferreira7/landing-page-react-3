@@ -2,8 +2,13 @@ import styled, { css } from 'styled-components';
 import { Container as SectionContainer } from '../SectionContainer/styles';
 import { Title as Heading } from '../Heading/styles';
 
+const menuVisible = (theme) => css`
+  visibility: visible;
+  opacity: 1;
+  `;
+
 export const Container = styled.div`
-${({ theme }) => css`
+${({ theme, visible }) => css`
     position:fixed;
     top: 0;
     left:0;
@@ -28,6 +33,9 @@ ${({ theme }) => css`
 
     @media ${theme.media.lteMedium}{
       height:100vh;
+      visibility:hidden;
+      opacity: 0;
+      ${visible && menuVisible(theme)}
 
       > ${SectionContainer}{
         display: grid;
