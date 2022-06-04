@@ -19,6 +19,7 @@ ${({ theme, visible }) => css`
     height:100%;
     border-bottom-color: ${theme.colors.mediumGray};
     background-color:${theme.colors.white};
+    transition: all 300ms ease-in-out;
 
 
     > ${SectionContainer}{
@@ -70,7 +71,7 @@ ${({ theme }) => css`
 `}`;
 
 export const Button = styled.button`
-${({ theme }) => css`
+${({ theme, visible }) => css`
   z-index:6;
   position: fixed;
   top: 2rem;
@@ -81,6 +82,7 @@ ${({ theme }) => css`
   color:${theme.colors.white};
   border:none;
   display:none;
+  pointer-events: ${visible ? 'none' : 'all'};
 
   > svg{
     width:2.5rem;

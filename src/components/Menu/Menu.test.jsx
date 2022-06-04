@@ -1,9 +1,19 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { Menu } from '.';
+import linksMock from '../NavLinks/mock';
+import { renderTheme } from '../../styles/render-theme';
+
+const logoData = [
+  {
+    text: 'Logo',
+    link: '#target',
+    srcImage: '',
+  },
+];
 
 describe('<Menu/>', () => {
   it('should render with default values', () => {
-    render(<Menu>Texto</Menu>);
-    expect(screen.getByRole('heading')).toBeInTheDocument();
+    renderTheme(<Menu link={linksMock} logoData={logoData} />);
+    expect(screen.getByRole('heading', { name: 'Logo' })).toBeInTheDocument();
   });
 });
