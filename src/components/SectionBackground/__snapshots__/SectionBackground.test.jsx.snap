@@ -16,7 +16,7 @@ exports[`<SectionBackground/> should render with background dark 1`] = `
 }
 
 .c1 {
-  width: 120rem;
+  width: 100%;
   margin: 0 auto;
   padding: 3.2rem;
 }
@@ -54,7 +54,7 @@ exports[`<SectionBackground/> should render with background light 1`] = `
 }
 
 .c1 {
-  width: 120rem;
+  width: 100%;
   margin: 0 auto;
   padding: 3.2rem;
 }
