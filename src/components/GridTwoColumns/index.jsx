@@ -8,7 +8,7 @@ import { TextComponent } from '../TextComponent';
 export const GridTwoColumns = ({ title, text, srcImg, background = false }) => {
   return (
     <SectionBackground background={background}>
-      <Styled.Container>
+      <Styled.Container background={background}>
         <Styled.TextContainer>
           <Heading upperCase colorDark={background}>
             {title}
