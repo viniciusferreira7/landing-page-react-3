@@ -1,15 +1,30 @@
 import P from 'prop-types';
 import React from 'react';
 import * as Styled from './styles';
+import { SectionBackground } from '../SectionBackground';
+import { Heading } from '../Heading';
+import { TextComponent } from '../TextComponent';
 
-export const GridTwoColumns = ({ children }) => {
+export const GridTwoColumns = ({ title, text, srcImg, background = false }) => {
   return (
-    <Styled.Container>
-      <h1>{children}</h1>
-    </Styled.Container>
+    <SectionBackground background={background}>
+      <Styled.Container>
+        <Styled.TextContainer>
+          <Heading colorDark={background}>{title}</Heading>
+          <TextComponent>{text}</TextComponent>
+        </Styled.TextContainer>
+        <Styled.ImageContainer>
+          <Heading colorDark={background}>{title}</Heading>
+          <TextComponent>{text}</TextComponent>
+        </Styled.ImageContainer>
+      </Styled.Container>
+    </SectionBackground>
   );
 };
 
 GridTwoColumns.propTypes = {
-  children: P.node.isRequired,
+  title: P.string.isRequired,
+  text: P.string.isRequired,
+  srcImg: P.string.isRequired,
+  background: P.bool,
 };
