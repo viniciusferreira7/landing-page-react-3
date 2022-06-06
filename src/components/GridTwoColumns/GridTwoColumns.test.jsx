@@ -1,9 +1,19 @@
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import { GridTwoColumns } from '.';
+import { renderTheme } from '../../styles/render-theme';
+import mock from './mock';
 
 describe('<GridTwoColumns/>', () => {
-  it('should render with default values', () => {
-    render(<GridTwoColumns>Texto</GridTwoColumns>);
-    expect(screen.getByRole('heading')).toBeInTheDocument();
+  it('should render image', () => {
+    renderTheme(<GridTwoColumns {...mock} />);
+    expect(screen.getByAltText(/grid/i)).toHaveAttribute(
+      'src',
+      'assets/images/javascript.svg',
+    );
+  });
+
+  it('should match snapshot', () => {
+    const { container } = renderTheme(<GridTwoColumns {...mock} />);
+    expect(container).toMatchSnapshot();
   });
 });
