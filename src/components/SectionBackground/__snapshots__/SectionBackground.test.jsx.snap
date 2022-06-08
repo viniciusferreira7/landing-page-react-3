@@ -28,9 +28,7 @@ exports[`<SectionBackground/> should render with background dark 1`] = `
     <section
       class="c1"
     >
-      <h1>
-        Children
-      </h1>
+      Children
     </section>
   </section>
 </div>

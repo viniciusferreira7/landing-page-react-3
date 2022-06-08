@@ -21,13 +21,6 @@ describe('<SectionBackground/>', () => {
       <SectionBackground>Children</SectionBackground>,
     );
 
-    screen.debug();
-    expect(screen.getByText('Children').parentElement).toHaveStyleRule(
-      'background',
-      theme.colors.white,
-    );
-
-    //Problema no teste do tema escuro, talvez isso resolva o problema do coverage
     expect(screen.getByText('Children')).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
