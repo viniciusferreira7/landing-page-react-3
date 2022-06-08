@@ -8,7 +8,7 @@ export const GridTwoColumns = ({
   title,
   text,
   srcImg,
-  background,
+  background = false,
   sectionId = '',
 }) => {
   return (

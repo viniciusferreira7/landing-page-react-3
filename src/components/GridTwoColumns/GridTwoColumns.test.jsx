@@ -6,7 +6,7 @@ import mock from './mock';
 
 describe('<GridTwoColumns/>', () => {
   it('should render image', () => {
-    renderTheme(<GridTwoColumns {...mock} />);
+    renderTheme(<GridTwoColumns {...mock} background={undefined} />);
     expect(screen.getByAltText(/grid/i)).toHaveAttribute(
       'src',
       'assets/images/javascript.svg',
