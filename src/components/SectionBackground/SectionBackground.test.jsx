@@ -1,6 +1,7 @@
 import { screen } from '@testing-library/react';
 import { SectionBackground } from '.';
 import { renderTheme } from '../../styles/render-theme';
+import { theme } from '../../styles/theme';
 
 describe('<SectionBackground/>', () => {
   it('should render with background white ', () => {
@@ -17,25 +18,29 @@ describe('<SectionBackground/>', () => {
 
   it('should render with background dark', () => {
     const { container } = renderTheme(
-      <SectionBackground>
-        <h1>Children</h1>
-      </SectionBackground>,
+      <SectionBackground>Children</SectionBackground>,
     );
-    expect(
-      screen.getByRole('heading', { name: 'Children' }),
-    ).toBeInTheDocument();
+
+    screen.debug();
+    expect(screen.getByText('Children').parentElement).toHaveStyleRule(
+      'background',
+      theme.colors.white,
+    );
+
+    //Problema no teste do tema escuro, talvez isso resolva o problema do coverage
+    expect(screen.getByText('Children')).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
 
   it('should render with background light', () => {
     const { container } = renderTheme(
-      <SectionBackground background>
-        <h1>Children</h1>
-      </SectionBackground>,
+      <SectionBackground background>Children</SectionBackground>,
     );
-    expect(
-      screen.getByRole('heading', { name: 'Children' }),
-    ).toBeInTheDocument();
+    expect(screen.getByText('Children').parentElement).toHaveStyleRule(
+      'background',
+      theme.colors.primaryColor,
+    );
+    expect(screen.getByText('Children')).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
 });

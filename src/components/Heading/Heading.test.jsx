@@ -10,7 +10,7 @@ describe('<Heading/>', () => {
     const heading = screen.getByRole('heading', { name: 'Texto' });
 
     expect(heading).toHaveStyle({
-      color: theme.colors.primaryColor,
+      color: theme.colors.white,
       'font-size': theme.font.sizes.xlarge,
       'text-transform': 'none',
     });
@@ -21,7 +21,7 @@ describe('<Heading/>', () => {
     const heading = screen.getByRole('heading', { name: 'Texto' });
 
     expect(heading).toHaveStyle({
-      color: theme.colors.white,
+      color: theme.colors.primaryColor,
     });
   });
 

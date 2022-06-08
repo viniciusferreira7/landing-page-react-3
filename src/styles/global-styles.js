@@ -32,4 +32,8 @@ ul, ol {
   padding: ${({ theme }) => theme.spacings.medium};
 }
 
+a{
+  color:${({ theme }) => theme.colors.secondaryColor}
+}
+
 `;

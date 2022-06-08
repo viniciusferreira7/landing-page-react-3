@@ -2,7 +2,7 @@
 
 exports[`<GridTwoColumns/> should match snapshot 1`] = `
 .c5 {
-  color: #0A1128;
+  color: #fff;
   font-size: 4.0rem;
   text-transform: none;
 }

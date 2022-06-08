@@ -66,9 +66,7 @@ exports[`<SectionBackground/> should render with background light 1`] = `
     <section
       class="c1"
     >
-      <h1>
-        Children
-      </h1>
+      Children
     </section>
   </section>
 </div>

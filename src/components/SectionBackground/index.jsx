@@ -3,7 +3,7 @@ import React from 'react';
 import * as Styled from './styles';
 import { SectionContainer } from '../SectionContainer';
 
-export const SectionBackground = ({ children, background }) => {
+export const SectionBackground = ({ children, background = false }) => {
   return (
     <Styled.Container background={background}>
       <SectionContainer>{children}</SectionContainer>
