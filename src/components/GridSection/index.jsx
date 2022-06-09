@@ -3,17 +3,40 @@ import React from 'react';
 import * as Styled from './styles';
 import { SectionBackground } from '../SectionBackground';
 import { Heading } from '../Heading';
+import { TextComponent } from '../TextComponent';
 
-export const GridSection = ({ children }) => {
+export const GridSection = ({
+  title,
+  description,
+  grid,
+  background = false,
+}) => {
   return (
-    <SectionBackground>
+    <SectionBackground background={background}>
       <Styled.Container>
-        <Heading />
+        <Heading colorDark={!background}>{title}</Heading>
+        <TextComponent>{description}</TextComponent>
+        <Styled.Grid>
+          {grid.map((el) => (
+            <Styled.GridElement key={el.title}>
+              <Heading colorDark={!background}>{el.title}</Heading>
+              <TextComponent>{el.description}</TextComponent>
+            </Styled.GridElement>
+          ))}
+        </Styled.Grid>
       </Styled.Container>
     </SectionBackground>
   );
 };
 
 GridSection.propTypes = {
-  children: P.node.isRequired,
+  title: P.string.isRequired,
+  description: P.string.isRequired,
+  grid: P.arrayOf(
+    P.shape({
+      title: P.string.isRequired,
+      description: P.string.isRequired,
+    }),
+  ).isRequired,
+  background: P.bool,
 };
