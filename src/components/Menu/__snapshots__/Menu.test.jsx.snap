@@ -67,11 +67,6 @@ exports[`<Menu/> should not render links 1`] = `
   pointer-events: all;
 }
 
-.c0 > svg {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
 .c1 {
   display: inline-block;
   vertical-align: middle;
@@ -291,11 +286,6 @@ exports[`<Menu/> should render logo and Main Menu Nav 1`] = `
   border: none;
   display: none;
   pointer-events: all;
-}
-
-.c0 > svg {
-  width: 2.5rem;
-  height: 2.5rem;
 }
 
 .c1 {

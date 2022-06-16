@@ -1,11 +1,11 @@
-import { GridSection } from '.';
+import { GridText } from '.';
 import { renderTheme } from '../../styles/render-theme';
 import mock from './mock';
 
-describe('<GridSection/>', () => {
+describe('<GridText/>', () => {
   it('should render', () => {
     const { container } = renderTheme(
-      <GridSection {...mock} background={undefined} />,
+      <GridText {...mock} background={undefined} />,
     );
     expect(container).toMatchSnapshot();
   });

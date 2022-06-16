@@ -84,10 +84,6 @@ ${({ theme, visible }) => css`
   display:none;
   pointer-events: ${visible ? 'none' : 'all'};
 
-  > svg{
-    width:2.5rem;
-    height:2.5rem;
-  }
 
   @media ${theme.media.lteMedium}{
     display:flex;
