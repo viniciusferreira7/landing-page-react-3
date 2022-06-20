@@ -51,11 +51,11 @@ exports[`<GridContent/> should render with default values 1`] = `
       <div
         class="c2"
       >
-        <h1
+        <h2
           class="c3"
         >
           O titulo que eu quero
-        </h1>
+        </h2>
         <div
           class="c4"
         >
