@@ -32,7 +32,9 @@ exports[`<Footer/> should render 1`] = `
       <div
         class="c2"
       >
-        Texto
+        <h1>
+          Texto
+        </h1>
       </div>
     </section>
   </div>
