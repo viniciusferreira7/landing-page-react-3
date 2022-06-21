@@ -1,10 +1,9 @@
 import styled, { css } from 'styled-components';
-import { Title as HeadingContainer } from '../Heading/styles';
 import { Container as TextComponent } from '../TextComponent/styles';
 
 export const Container = styled.div`
 ${({ theme }) => css`
-  ${TextComponent}{
+ > ${TextComponent}{
     margin-bottom: ${theme.spacings.xhuge};
   }
 `}
@@ -12,7 +11,6 @@ ${({ theme }) => css`
 
 export const Grid = styled.div`
 ${({ theme }) => css`
-  counter-reset: grid-counter;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: ${theme.spacings.large};
@@ -21,19 +19,17 @@ ${({ theme }) => css`
 
 export const GridElement = styled.div`
 ${() => css`
-  ${HeadingContainer}{
-    position: relative;
-    left:5rem;
-  }
+  overflow: hidden;
+`}
+`;
 
-  ${HeadingContainer}::before {
-    counter-increment: grid-counter;
-    content: counter(grid-counter) ;
-    position: absolute;
-    font-size: 7rem;
-    top: -3rem;
-    left: -4rem;
-    transform: rotate(5deg);
+export const Image = styled.img`
+${() => css`
+  width:100%;
+  transition: all 300ms ease-in-out;
+
+  &:hover{
+    transform: scale(1.2) rotate(10deg)
   }
 `}
 `;
