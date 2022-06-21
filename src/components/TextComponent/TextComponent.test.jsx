@@ -8,10 +8,10 @@ describe('<TextComponent/>', () => {
     const text = screen.getByText('Texto');
     expect(text).toBeInTheDocument();
   });
-  it('should only paragraph', () => {
+  it('should only div', () => {
     renderTheme(<TextComponent>Texto</TextComponent>);
     const text = screen.getByText('Texto');
-    expect(text.tagName.toLowerCase()).toBe('p');
+    expect(text.tagName.toLowerCase()).toBe('div');
   });
 
   it('should march snapshot', () => {
@@ -21,11 +21,11 @@ describe('<TextComponent/>', () => {
         font-size: 2.4rem;
       }
 
-      <p
+      <div
         class="c0"
       >
         Texto
-      </p>
+      </div>
     `);
   });
 });

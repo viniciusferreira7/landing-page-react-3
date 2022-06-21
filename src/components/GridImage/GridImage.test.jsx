@@ -1,9 +1,12 @@
-import { render, screen } from '@testing-library/react';
 import { GridImage } from '.';
+import { renderTheme } from '../../styles/render-theme';
+import mock from './mock';
 
 describe('<GridImage/>', () => {
-  it('should render with default values', () => {
-    render(<GridImage>Texto</GridImage>);
-    expect(screen.getByRole('heading')).toBeInTheDocument();
+  it('should render', () => {
+    const { container } = renderTheme(
+      <GridImage {...mock} background={undefined} />,
+    );
+    expect(container).toMatchSnapshot();
   });
 });

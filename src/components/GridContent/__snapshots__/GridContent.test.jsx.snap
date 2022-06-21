@@ -59,7 +59,7 @@ exports[`<GridContent/> should render with default values 1`] = `
         <div
           class="c4"
         >
-          <p
+          <div
             class="c5"
           >
             <h1>
@@ -156,7 +156,7 @@ exports[`<GridContent/> should render with default values 1`] = `
   
               </code>
             </pre>
-          </p>
+          </div>
         </div>
       </div>
     </section>
