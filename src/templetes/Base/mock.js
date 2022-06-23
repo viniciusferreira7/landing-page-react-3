@@ -7,4 +7,5 @@ export default {
     srcImage: 'assets/images/logo.svg',
     link: '#',
   },
+  footerHtml: '<p>Teste do Footer</p>',
 };

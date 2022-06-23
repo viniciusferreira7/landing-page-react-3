@@ -7,7 +7,6 @@ export default {
   args: {
     ...mock,
     children: 'Base',
-    footerHtml: '<p>Teste do Footer</p>',
   },
 };
 
